@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="outside-calc">
+            <div class="margin-container">
+                <div class="screen">
+                    <h2 id="display" class="display">0</h2>
+                </div>
+                <div class="keyboard">
+                    <div class="button del" id="delete">C</div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button" id="dividedBy">÷</div>
+                    <div class="button" id="number7">7</div>
+                    <div class="button" id="number8">8</div>
+                    <div class="button" id="number9">9</div>
+                    <div class="button" id="multiplication">X</div>
+                    <div class="button" id="number4">4</div>
+                    <div class="button" id="number5">5</div>
+                    <div class="button" id="number6">6</div>
+                    <div class="button" id="subtraction">-</div>
+                    <div class="button" id="number1">1</div>
+                    <div class="button" id="number2">2</div>
+                    <div class="button" id="number3">3</div>
+                    <div class="button" id="plus">+</div>
+                    <div class="button"></div>
+                    <div class="button" id="number0">0</div>
+                    <div class="button"></div>
+                    <div class="button" id="equals">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const btn = document.querySelectorAll('.button');
+
+    const del = document.getElementById("delete");
+    const plus = document.getElementById('plus');
+    const subtraction = document.getElementById('subtraction');
+    const multiplication = document.getElementById('multiplication');
+    const dividedBy = document.getElementById('dividedBy');
+    const equals = document.getElementById('equals');
+
+    const number0 = document.getElementById("number0");
+    const number1 = document.getElementById("number1");
+    const number2 = document.getElementById("number2");
+    const number3 = document.getElementById("number3");
+    const number4 = document.getElementById("number4");
+    const number5 = document.getElementById("number5");
+    const number6 = document.getElementById("number6");
+    const number7 = document.getElementById("number7");
+    const number8 = document.getElementById("number8");
+    const number9 = document.getElementById("number9");
+
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('button')) {
+            event.target.style.backgroundColor = 'rgb(5, 37, 28)';
+            event.target.style.color = 'white';
+            event.target.style.borderColor = 'transparent';
+            setTimeout(() => {
+                event.target.style.backgroundColor = '';
+                event.target.style.color = '';
+                event.target.style.borderColor = '';
+            }, 100);
+
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '0') {
+            number0.style.backgroundColor = 'rgb(5, 37, 28)';
+            number0.style.color = 'white';
+            number0.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '0';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '0') {
+            number0.style.backgroundColor = '';
+            number0.style.color = '';
+            number0.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '1') {
+            number1.style.backgroundColor = 'rgb(5, 37, 28)';
+            number1.style.color = 'white';
+            number1.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '1';
+
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '1') {
+            number1.style.backgroundColor = '';
+            number1.style.color = '';
+            number1.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '2') {
+            number2.style.backgroundColor = 'rgb(5, 37, 28)';
+            number2.style.color = 'white';
+            number2.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '2';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '2') {
+            number2.style.backgroundColor = '';
+            number2.style.color = '';
+            number2.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '3') {
+            number3.style.backgroundColor = 'rgb(5, 37, 28)';
+            number3.style.color = 'white';
+            number3.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '3';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '3') {
+            number3.style.backgroundColor = '';
+            number3.style.color = '';
+            number3.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '4') {
+            number4.style.backgroundColor = 'rgb(5, 37, 28)';
+            number4.style.color = 'white';
+            number4.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '4';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '4') {
+            number4.style.backgroundColor = '';
+            number4.style.color = '';
+            number4.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '5') {
+            number5.style.backgroundColor = 'rgb(5, 37, 28)';
+            number5.style.color = 'white';
+            number5.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '5';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '5') {
+            number5.style.backgroundColor = '';
+            number5.style.color = '';
+            number5.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '6') {
+            number6.style.backgroundColor = 'rgb(5, 37, 28)';
+            number6.style.color = 'white';
+            number6.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '6';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '6') {
+            number6.style.backgroundColor = '';
+            number6.style.color = '';
+            number6.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '7') {
+            number7.style.backgroundColor = 'rgb(5, 37, 28)';
+            number7.style.color = 'white';
+            number7.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '7';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '7') {
+            number7.style.backgroundColor = '';
+            number7.style.color = '';
+            number7.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '8') {
+            number8.style.backgroundColor = 'rgb(5, 37, 28)';
+            number8.style.color = 'white';
+            number8.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '8';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '8') {
+            number8.style.backgroundColor = '';
+            number8.style.color = '';
+            number8.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '9') {
+            number9.style.backgroundColor = 'rgb(5, 37, 28)';
+            number9.style.color = 'white';
+            number9.style.borderColor = 'transparent';
+            if (display.innerText === '0') {
+                display.innerText = '';
+            }
+            display.innerText += '9';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '9') {
+            number9.style.backgroundColor = '';
+            number9.style.color = '';
+            number9.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'd' || event.key === 'D') {
+            del.style.backgroundColor = 'rgb(5, 37, 28)';
+            del.style.color = 'white';
+            del.style.borderColor = 'transparent';
+            display.innerText = '0';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === 'd' || event.key === 'D') {
+            del.style.backgroundColor = '';
+            del.style.color = '';
+            del.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '-') {
+            subtraction.style.backgroundColor = 'rgb(5, 37, 28)';
+            subtraction.style.color = 'white';
+            subtraction.style.borderColor = 'transparent';
+            display.innerText += '-';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '-') {
+            subtraction.style.backgroundColor = '';
+            subtraction.style.color = '';
+            subtraction.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '+') {
+            plus.style.backgroundColor = 'rgb(5, 37, 28)';
+            plus.style.color = 'white';
+            plus.style.borderColor = 'transparent';
+            display.innerText += '+';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '+') {
+            plus.style.backgroundColor = '';
+            plus.style.color = '';
+            plus.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '*') {
+            multiplication.style.backgroundColor = 'rgb(5, 37, 28)';
+            multiplication.style.color = 'white';
+            multiplication.style.borderColor = 'transparent';
+            display.innerText += 'X';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '*') {
+            multiplication.style.backgroundColor = '';
+            multiplication.style.color = '';
+            multiplication.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '/') {
+            dividedBy.style.backgroundColor = 'rgb(5, 37, 28)';
+            dividedBy.style.color = 'white';
+            dividedBy.style.borderColor = 'transparent';
+            display.innerText += '÷';
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '/') {
+            dividedBy.style.backgroundColor = '';
+            dividedBy.style.color = '';
+            dividedBy.style.borderColor = '';
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === '=') {
+            equals.style.backgroundColor = 'rgb(5, 37, 28)';
+            equals.style.color = 'white';
+            equals.style.borderColor = 'transparent';
+
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.key === '=') {
+            equals.style.backgroundColor = '';
+            equals.style.color = '';
+            equals.style.borderColor = '';
+        }
+    });
+</script>
+</html>

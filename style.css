@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.outside-calc {
+    width: 28vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 116, 86);
+    border-radius: 8px;
+}
+
+.margin-container {
+    width: 90%;
+    height: 90%;
+    border: 1px solid rgb(152, 219, 199);
+    border-radius: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+    border: 1px solid rgb(152, 219, 199);
+    border-radius: 8px;
+    background-color: rgb(5, 37, 28);
+}
+
+.display {
+    font-size: 50px;
+    color: rgb(152, 219, 199);
+    padding: 0px 10px;
+    text-align: right;
+}
+
+.keyboard {
+    width: 90%;
+    height: 70%;
+    border: 1px solid rgb(152, 219, 199);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(152, 219, 199);
+    border-radius: 8px;
+    height: 16%;
+    width: 21%;
+    background-color: rgb(43, 124, 101);
+    font-size: 30px;
+}
